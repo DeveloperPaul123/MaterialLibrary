@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/activity_button_title_one"
+            android:text="Buttons"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.devpaul.materiallibrary.views.MaterialFlatButton
+            android:id="@+id/activity_button_default_flat_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_button_title_one"
+            android:layout_weight="1"/>
+
+        <com.devpaul.materiallibrary.views.MaterialFlatButton
+            android:id="@+id/activity_button_agree_flat_button"
+            android:layout_toRightOf="@id/activity_button_default_flat_button"
+            android:layout_below="@id/activity_button_title_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mat_flat_button_color="#303F9F"
+            app:mat_flat_button_is_flat="true"
+            app:mat_flat_button_text="Agree"
+            android:layout_weight="1"/>
+
+        <com.devpaul.materiallibrary.views.MaterialFlatButton
+            android:id="@+id/activity_button_cancel_flat_button"
+            android:layout_toRightOf="@id/activity_button_agree_flat_button"
+            android:layout_below="@id/activity_button_title_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mat_flat_button_color="#F44336"
+            app:mat_flat_button_is_flat="false"
+            app:mat_flat_button_text="Cancel"
+            android:layout_weight="1"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/activity_button_title_two"
+            android:text="FABs"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.devpaul.materiallibrary.views.MaterialFloatingActionButton
+            android:id="@+id/activity_button_default_fab"
+            android:layout_below="@id/activity_button_title_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.devpaul.materiallibrary.views.MaterialFloatingActionButton
+            android:id="@+id/activity_button_blue_fab"
+            android:layout_toRightOf="@id/activity_button_default_fab"
+            android:layout_below="@id/activity_button_title_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mat_fab_colorNormal="#303F9F"/>
+
+        <com.devpaul.materiallibrary.views.MaterialFloatingActionButton
+            android:id="@+id/activity_button_default_mini_fab"
+            android:layout_below="@id/activity_button_default_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mat_fab_size="mini"/>
+
+        <com.devpaul.materiallibrary.views.MaterialFloatingActionButton
+            android:id="@+id/activity_button_red_mini_fab"
+            android:layout_toRightOf="@id/activity_button_default_mini_fab"
+            android:layout_below="@id/activity_button_default_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mat_fab_colorNormal="#F44336"
+            app:mat_fab_icon="@android:drawable/ic_btn_speak_now"
+            app:mat_fab_size="mini"/>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

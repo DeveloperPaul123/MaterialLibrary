@@ -1,0 +1,62 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.devpaul.materiallibrary.views.MaterialFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.devpaul.materiallibrary.menus.LinearFabMenu
+        android:id="@+id/linearFabMenu"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        app:lin_fab_exp_dir="horizontal"
+        app:lin_fab_align="left">
+
+        <com.devpaul.materiallibrary.menus.LinearFabMenuItem
+            android:id="@+id/linear_menu_item_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lin_fab_item_icon="@android:drawable/ic_delete"/>
+
+        <com.devpaul.materiallibrary.menus.LinearFabMenuItem
+            android:id="@+id/linear_menu_item_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lin_fab_item_icon="@android:drawable/ic_dialog_info"/>
+
+        <com.devpaul.materiallibrary.menus.LinearFabMenuItem
+            android:id="@+id/linear_menu_item_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lin_fab_item_icon="@android:drawable/ic_menu_add"/>
+
+    </com.devpaul.materiallibrary.menus.LinearFabMenu>
+
+    <com.devpaul.materiallibrary.menus.MaterialFloatingActionButtonMenu
+        android:id="@+id/material_float_action_button_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right">
+        <com.devpaul.materiallibrary.menus.MaterialFABMenuItem
+            android:id="@+id/mat_fab_item_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mat_fab_item_icon="@android:drawable/ic_input_delete"/>
+        <com.devpaul.materiallibrary.menus.MaterialFABMenuItem
+            android:id="@+id/mat_fab_item_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mat_fab_item_icon="@android:drawable/ic_media_play"/>
+        <com.devpaul.materiallibrary.menus.MaterialFABMenuItem
+            android:id="@+id/mat_fab_disk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mat_fab_item_icon="@android:drawable/ic_popup_disk_full"/>
+    </com.devpaul.materiallibrary.menus.MaterialFloatingActionButtonMenu>
+
+</FrameLayout>

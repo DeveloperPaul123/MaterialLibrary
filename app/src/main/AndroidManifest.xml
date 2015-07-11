@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.materiallib.devpaul.materiallibrary" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.NoActionBar" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MenuActivity" android:label="Menu Activity" android:configChanges="orientation|keyboard|keyboardHidden"/>
+        <activity android:name=".FabListActivity" android:label="FabListActivity" android:configChanges="orientation|keyboard|keyboardHidden"/>
+        <activity android:name=".BaseListActivity" android:label="FabListActivity" android:configChanges="orientation|keyboard|keyboardHidden"/>
+        <activity android:name=".BaseToolbarExample" android:label="FabListActivity" android:configChanges="orientation|keyboard|keyboardHidden"/>
+        <activity android:name=".ButtonActivity" android:label="ButtonActivity" android:configChanges="orientation|keyboardHidden|keyboard"/>
+        <activity android:name=".QuickReturnActivity" android:label="ButtonActivity" android:configChanges="orientation|keyboardHidden|keyboard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".CollapsingToolbarRecycler" android:label="ButtonActivity" android:configChanges="orientation|keyboardHidden|keyboard"/>
+    </application>
+
+</manifest>
