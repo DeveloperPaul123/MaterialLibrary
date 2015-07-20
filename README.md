@@ -2,6 +2,14 @@
 This is a simple library that provides some unique components for aiding in making apps comply with the material design guidelines.
 
 <h2>Components</h2>
+<h3>Buttons</h3>
+- Material Floating Action Button
+- Material Flat Button
+
+<h3>Menus</h3>
+- Material Circular FAB Menu
+- FAB Linear Menu
+
 
 <h2>Usage</h2>
 
