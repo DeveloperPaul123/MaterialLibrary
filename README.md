@@ -10,6 +10,15 @@ This is a simple library that provides some unique components for aiding in maki
 - Material Circular FAB Menu
 - FAB Linear Menu
 
+<h3>Utilities</h3>
+- Color Generator
+- Shadow Generator
+- Ripple Generator
+- ShadowRippleGenerator
+- SelectorShadowGenerator
+
+<h3>Abstract Classes</h3>
+- BaseToolbarActivity
 
 <h2>Usage</h2>
 
