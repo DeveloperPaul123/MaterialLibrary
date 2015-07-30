@@ -4,7 +4,42 @@ This is a simple library that provides some unique components for aiding in maki
 <h2>Components</h2>
 <h3>Buttons</h3>
 - Material Floating Action Button
+    - Normal
+            
 - Material Flat Button
+Examples:
+
+````xml
+    //default
+   <com.devpaul.materiallibrary.views.MaterialFlatButton
+            android:id="@+id/activity_button_default_flat_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_button_title_one"
+            android:layout_weight="1"/>
+    //truly flat
+    <com.devpaul.materiallibrary.views.MaterialFlatButton
+        android:id="@+id/activity_button_agree_flat_button"
+        android:layout_toRightOf="@id/activity_button_default_flat_button"
+        android:layout_below="@id/activity_button_title_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:mat_flat_button_color="#303F9F"
+        app:mat_flat_button_is_flat="true"
+        app:mat_flat_button_text="Agree"
+        android:layout_weight="1"/>
+    //not flat
+    <com.devpaul.materiallibrary.views.MaterialFlatButton
+        android:id="@+id/activity_button_cancel_flat_button"
+        android:layout_toRightOf="@id/activity_button_agree_flat_button"
+        android:layout_below="@id/activity_button_title_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:mat_flat_button_color="#F44336"
+        app:mat_flat_button_is_flat="false"
+        app:mat_flat_button_text="Cancel"
+        android:layout_weight="1"/>
+````
 
 <h3>Menus</h3>
 - Material Circular FAB Menu
