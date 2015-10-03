@@ -1,6 +1,27 @@
 # MaterialLibrary
 This is a simple library that provides some unique components for aiding in making apps comply with the material design guidelines.
 
+How to use
+Add the following lines to you top level build.gradle
+
+````java
+allprojects {
+    repositories {
+    ...
+    maven {url "https://jitpack.io"}
+    }
+}
+````
+Then add the following to your apps build.gradle
+
+````java
+
+dependencies {
+    ....
+    compile 'com.github.DeveloperPaul123:MaterialLibrary:1.0.2'
+}
+````
+
 <h2>Components</h2>
 <h3>Buttons</h3>
 - Material Floating Action Button
