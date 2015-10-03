@@ -22,4 +22,5 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':materialfabmenu')
+//    compile 'com.github.developerpaul123:MaterialLibrary:1.0'
 }
