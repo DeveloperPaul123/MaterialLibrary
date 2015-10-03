@@ -4,6 +4,15 @@ android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
 
+    signingConfigs {
+        production {
+            keyAlias 'DeveloperPaul123'
+            keyPassword 'alienalias'
+            storeFile file('./keystore.jks')
+            storePassword 'noneyobizness'
+        }
+    }
+
     defaultConfig {
         applicationId "com.materiallib.devpaul.materiallibrary"
         minSdkVersion 16
@@ -12,15 +21,19 @@ android {
         versionName "1.0"
     }
     buildTypes {
+        debug {
+            signingConfig signingConfigs.production
+        }
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.production
         }
     }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':materialfabmenu')
-//    compile 'com.github.DeveloperPaul123:MaterialLibrary:1.0.1@aar'
+//    compile project(':materialfabmenu')
+    compile 'com.github.DeveloperPaul123:MaterialLibrary:1.0.2'
 }
