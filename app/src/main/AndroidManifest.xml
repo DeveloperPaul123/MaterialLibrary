@@ -25,6 +25,7 @@
         <activity android:name=".QuickReturnActivity" android:label="ButtonActivity" android:configChanges="orientation|keyboardHidden|keyboard"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".CollapsingToolbarRecycler" android:label="ButtonActivity" android:configChanges="orientation|keyboardHidden|keyboard"/>
+        <activity android:name=".CollapsingToolbarFab" android:label="CollapsingToolbarwithFAB" android:configChanges="orientation|keyboard|keyboardHidden"/>
     </application>
 
 </manifest>

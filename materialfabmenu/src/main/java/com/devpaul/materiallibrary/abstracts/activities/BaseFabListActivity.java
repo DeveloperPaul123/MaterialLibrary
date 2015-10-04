@@ -50,7 +50,7 @@ public abstract class BaseFabListActivity extends BaseToolbarListActivity {
         FrameLayout.LayoutParams params = new FrameLayout
                 .LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT);
-        params.gravity = Gravity.BOTTOM|Gravity.RIGHT;
+        params.gravity = Gravity.BOTTOM | Gravity.RIGHT;
 
         coordinatorLayout = new CoordinatorLayout(this);
         coordinatorLayout.setLayoutParams(params);

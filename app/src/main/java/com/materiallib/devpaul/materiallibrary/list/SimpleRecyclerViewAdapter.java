@@ -58,4 +58,5 @@ public class SimpleRecyclerViewAdapter extends RecyclerView.Adapter {
     public ListItem getItem(int position) {
         return items.get(position);
     }
+
 }
