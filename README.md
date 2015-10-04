@@ -21,6 +21,8 @@ dependencies {
     compile 'com.github.DeveloperPaul123:MaterialLibrary:1.0.2'
 }
 ````
+<h2>Video Demo</h2>
+https://youtu.be/miLUyFCyxZw
 
 <h2>Components</h2>
 <h3>Buttons</h3>
