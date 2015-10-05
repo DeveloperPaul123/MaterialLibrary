@@ -2,9 +2,9 @@
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MaterialLibrary-blue.svg?style=flat)](http://android-arsenal.com/details/1/2594)
 
-This is a simple library that provides some unique components for aiding in making apps comply with the material design guidelines.
+This is a simple library that provides some unique components for aiding in making apps comply with the material design guidelines. (Please note that this Readme is a work in progress as there are a lot of components in this library.)
 
-How to use
+<h2>How to use</h2>
 Add the following lines to you top level build.gradle
 
 ````java
