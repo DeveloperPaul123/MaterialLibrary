@@ -1,4 +1,7 @@
 # MaterialLibrary
+
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MaterialLibrary-blue.svg?style=flat)](http://android-arsenal.com/details/1/2594)
+
 This is a simple library that provides some unique components for aiding in making apps comply with the material design guidelines.
 
 How to use
