@@ -1,7 +1,13 @@
 # MaterialLibrary
-This is a simple library that provides some unique components for aiding in making apps comply with the material design guidelines.
 
-How to use
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MaterialLibrary-blue.svg?style=flat)](http://android-arsenal.com/details/1/2594)
+
+This is a simple library that provides some unique components for aiding in making apps comply with the material design guidelines. (Please note that this Readme is a work in progress as there are a lot of components in this library.)
+
+<h2>Motivation</h2>
+I know what you're thinking: "Another material design library? Why?" Well, this library actually started as something I wanted to create to have some unique and cool looking floating action button menus to use in my apps that were still up to material design specs. In the process of making these menus I ended up making a lot of other material design components and a lot of really useful, easily injectable utilities to use in other custom views that others may create, so I decided that it would be great to share this work with others. I got my inspiration for the material design menus from materialup.com (great website btw, you should check it out) and will be adding more menus over time. If you have any suggestions for a menu you'd like to see implemented and have a link for me to look at, shoot me an email and I'll try to add it. If you use this library in your app, please let me know! I'd be happy to make a list and post it on this readme. 
+
+<h2>How to use</h2>
 Add the following lines to you top level build.gradle
 
 ````java
@@ -21,6 +27,8 @@ dependencies {
     compile 'com.github.DeveloperPaul123:MaterialLibrary:1.0.2'
 }
 ````
+<h2>Video Demo</h2>
+https://youtu.be/miLUyFCyxZw
 
 <h2>Components</h2>
 <h3>Buttons</h3>
