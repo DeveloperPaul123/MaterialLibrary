@@ -49,6 +49,11 @@ public class MaterialFlatButton extends BaseViewGroup {
     private TextView textView;
 
     /**
+     * Holder for the current text.
+     */
+    private String text;
+
+    /**
      * Generates the ripples and shadow.
      */
     private ShadowRippleGenerator shadowRippleGenerator;
@@ -69,7 +74,7 @@ public class MaterialFlatButton extends BaseViewGroup {
      * @param context the context from the parent.
      */
     public MaterialFlatButton(Context context) {
-        super(context);
+            super(context);
     }
 
     public MaterialFlatButton(Context context, AttributeSet attrs) {
@@ -84,18 +89,22 @@ public class MaterialFlatButton extends BaseViewGroup {
     public void init(Context context, AttributeSet attrs) {
 
         String text = "Button";
-
         TypedArray a = null;
-        try {
-            a = context.obtainStyledAttributes(attrs, R.styleable.MaterialFlatButton);
-            String temp = a.getString(R.styleable.MaterialFlatButton_mat_flat_button_text);
-            isFlat = a.getBoolean(R.styleable.MaterialFlatButton_mat_flat_button_is_flat, false);
-            color = a.getColor(R.styleable.MaterialFlatButton_mat_flat_button_color, getColor(R.color.material_deep_teal_500));
-            if(temp != null) text = temp;
-        } finally {
-            if(a != null) {
-                a.recycle();
+        if(attrs != null) {
+            try {
+                a = context.obtainStyledAttributes(attrs, R.styleable.MaterialFlatButton);
+                String temp = a.getString(R.styleable.MaterialFlatButton_mat_flat_button_text);
+                isFlat = a.getBoolean(R.styleable.MaterialFlatButton_mat_flat_button_is_flat, false);
+                color = a.getColor(R.styleable.MaterialFlatButton_mat_flat_button_color, getColor(R.color.material_deep_teal_500));
+                if(temp != null) text = temp;
+            } finally {
+                if(a != null) {
+                    a.recycle();
+                }
             }
+        } else {
+            isFlat = false;
+            color = getColor(R.color.material_deep_teal_500);
         }
 
         padding = getDimension(R.dimen.material_flat_button_padding);
@@ -121,7 +130,6 @@ public class MaterialFlatButton extends BaseViewGroup {
         createMainTextView(context, text);
 
         setWillNotDraw(false);
-
     }
 
     /**
@@ -138,7 +146,6 @@ public class MaterialFlatButton extends BaseViewGroup {
         textView.setAllCaps(true);
         textView.setText(text);
         textView.setTextColor(ColorUtils.getContrastColor(color));
-//        textView.setTypeface(null, Typeface.BOLD);
         addView(textView, this.generateDefaultLayoutParams());
     }
 
@@ -185,5 +192,23 @@ public class MaterialFlatButton extends BaseViewGroup {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         return shadowRippleGenerator.onTouchEvent(event);
+    }
+
+    /**
+     * Set the text of this button.
+     * @param text the new text.
+     */
+    public void setText(String text) {
+        this.text = text;
+        this.textView.setText(text);
+        invalidate();
+    }
+
+    /**
+     * Get the current text of this button.
+     * @return String the current text.
+     */
+    public String getText() {
+        return text;
     }
 }

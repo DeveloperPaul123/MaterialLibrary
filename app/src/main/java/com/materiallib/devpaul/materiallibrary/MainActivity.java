@@ -24,7 +24,8 @@ public class MainActivity extends BaseToolbarListActivity {
             "BaseFabListActivity",
             "BaseQuickReturn",
             "BaseCollapsingToolbar with Recycler",
-            "BaseCollapsingToolbar with FAB"
+            "BaseCollapsingToolbar with FAB",
+            "BaseRecyclerView with FAB"
     };
 
     @Override
@@ -78,6 +79,10 @@ public class MainActivity extends BaseToolbarListActivity {
                         case 7:
                             Intent baseCollapseWithFab = new Intent(MainActivity.this, CollapsingToolbarFab.class);
                             startActivity(baseCollapseWithFab);
+                            break;
+                        case 8:
+                            Intent baseRecylerFab = new Intent(MainActivity.this, ToolbarRecyclerActivity.class);
+                            startActivity(baseRecylerFab);
                     }
             }
         });
