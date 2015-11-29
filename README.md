@@ -24,7 +24,7 @@ Then add the following to your apps build.gradle
 
 dependencies {
     ....
-    compile 'com.github.DeveloperPaul123:MaterialLibrary:1.0.2'
+    compile 'com.github.DeveloperPaul123:MaterialLibrary:1.0.5'
 }
 ````
 <h2>Video Demo</h2>
