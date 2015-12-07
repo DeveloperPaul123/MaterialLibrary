@@ -31,6 +31,9 @@ dependencies {
 https://youtu.be/miLUyFCyxZw
 
 <h2>Components</h2>
+
+#### Note 
+* Please note that a more in depth look at all the components and instructions on how to use them will be added to the [wiki](https://github.com/DeveloperPaul123/MaterialLibrary/wiki) for this repository. This will make it much easier to organize (instead of having a really, really long README). 
 <h3>Buttons</h3>
 - Material Floating Action Button
     - Normal
