@@ -36,44 +36,10 @@ https://youtu.be/miLUyFCyxZw
 
 #### Note 
 * Please note that a more in depth look at all the components and instructions on how to use them will be added to the [wiki](https://github.com/DeveloperPaul123/MaterialLibrary/wiki) for this repository. This will make it much easier to organize (instead of having a really, really long README). 
+
 <h3>Buttons</h3>
 - Material Floating Action Button
-    - Normal
-            
 - Material Flat Button
-Examples:
-
-````xml
-    //default
-   <com.devpaul.materiallibrary.views.MaterialFlatButton
-            android:id="@+id/activity_button_default_flat_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/activity_button_title_one"
-            android:layout_weight="1"/>
-    //truly flat
-    <com.devpaul.materiallibrary.views.MaterialFlatButton
-        android:id="@+id/activity_button_agree_flat_button"
-        android:layout_toRightOf="@id/activity_button_default_flat_button"
-        android:layout_below="@id/activity_button_title_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:mat_flat_button_color="#303F9F"
-        app:mat_flat_button_is_flat="true"
-        app:mat_flat_button_text="Agree"
-        android:layout_weight="1"/>
-    //not flat
-    <com.devpaul.materiallibrary.views.MaterialFlatButton
-        android:id="@+id/activity_button_cancel_flat_button"
-        android:layout_toRightOf="@id/activity_button_agree_flat_button"
-        android:layout_below="@id/activity_button_title_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:mat_flat_button_color="#F44336"
-        app:mat_flat_button_is_flat="false"
-        app:mat_flat_button_text="Cancel"
-        android:layout_weight="1"/>
-````
 
 <h3>Menus</h3>
 - Material Circular FAB Menu
@@ -87,13 +53,29 @@ Examples:
 - SelectorShadowGenerator
 
 <h3>Abstract Classes</h3>
+<h4>Activities</h4>
 - BaseToolbarActivity
+- BaseToolbarListActivity
+- BaseToolbarRecyclerActivity
+- BaseRecyclerFabActivity
+- BaseFabListActivity
+- BaseQuickReturnRecyclerActivity
+- BaseCoordinatorLayoutActivity
+- BaseCollapsingToolbarActivity
+- BaseCollapsingToolbarActivityWithFab
+
+<h4>Other</h4>
+- AbstractRecyclerScrollListener
+- AbstractScrollListener
+- BaseCustomView
+- BaseViewGroup
 
 <h2>Usage</h2>
+Please see the [wiki](https://github.com/DeveloperPaul123/MaterialLibrary/wiki). 
 
 <h2>License</h2>
 
-Copyright 2015 Paul T
+Copyright 2016 Paul T
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
