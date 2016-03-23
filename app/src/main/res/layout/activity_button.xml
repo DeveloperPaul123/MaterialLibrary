@@ -50,6 +50,13 @@
             app:mat_flat_button_text="Cancel"
             android:layout_weight="1"/>
 
+        <com.devpaul.materiallibrary.views.MaterialFlatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mat_flat_button_color="#673ab7"
+            app:mat_flat_button_is_flat="false"
+            app:mat_flat_button_text="Stop"
+            android:layout_below="@id/activity_button_default_flat_button"/>
 
     </RelativeLayout>
 

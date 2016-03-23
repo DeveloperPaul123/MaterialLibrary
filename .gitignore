@@ -4,3 +4,10 @@
 /.idea/libraries
 .DS_Store
 /build
+.idea/
+*.html
+*.jks
+*.iml
+package-list
+*.css
+*.js

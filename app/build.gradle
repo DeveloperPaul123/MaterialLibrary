@@ -34,7 +34,7 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':materialfabmenu')
+    compile project(':materiallib')
     //for testing jitpack.io
 //    compile 'com.github.DeveloperPaul123:MaterialLibrary:1.0.2'
 }
