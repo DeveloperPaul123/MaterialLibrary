@@ -1,7 +1,7 @@
 package com.devpaul.materiallibrary.abstracts.activities;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -11,7 +11,7 @@ import com.devpaul.materialfabmenu.R;
 /**
  * Created by Paul on 6/13/2015.
  */
-public abstract class BaseToolbarActivity extends ActionBarActivity {
+public abstract class BaseToolbarActivity extends AppCompatActivity {
 
     /**
      *  The home view provided by the developer.
