@@ -2,15 +2,22 @@ apply plugin: 'com.android.library'
 
 group = 'com.github.developerpaul123'
 
+ext.versionMajor = 1
+ext.versionMinor = 0
+ext.versionPatch = 6
+ext.versionClassifier = null
+ext.isSnapshot = true
+ext.minimumSdkVersion = 16
+
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion project.ext.minimumSdkVersion
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode generateVersionCode() // 150010203
+        versionName generateVersionName() // 1.2.3-SNAPSHOT
     }
     buildTypes {
         release {
@@ -27,7 +34,25 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:26.1.0'
 }
 
+private Integer generateVersionCode() {
+    return ext.minimumSdkVersion * 10000000 + ext.versionMajor * 10000 + ext.versionMinor * 100 + ext.versionPatch
+}
 
+private String generateVersionName() {
+    String versionName = "${ext.versionMajor}.${ext.versionMinor}.${ext.versionPatch}"
+    if (ext.versionClassifier == null) {
+        if (ext.isSnapshot) {
+            ext.versionClassifier = "SNAPSHOT"
+        }
+    }
+
+    if (ext.versionClassifier != null) {
+        versionName += "-" + ext.versionClassifier
+    }
+    return versionName
+}
+
+// build a javadoc
 task javadoc(type: Javadoc) {
     failOnError  false
     source = android.sourceSets.main.java.sourceFiles

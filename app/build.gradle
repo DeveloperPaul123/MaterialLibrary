@@ -1,33 +1,27 @@
 apply plugin: 'com.android.application'
 
+ext.versionMajor = 1
+ext.versionMinor = 0
+ext.versionPatch = 0
+ext.versionClassifier = null
+ext.isSnapshot = true
+ext.minimumSdkVersion = 16
+
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
 
-    signingConfigs {
-        production {
-            keyAlias 'DeveloperPaul123'
-            keyPassword 'alienalias'
-            storeFile file('./keystore.jks')
-            storePassword 'noneyobizness'
-        }
-    }
-
     defaultConfig {
         applicationId "com.materiallib.devpaul.materiallibrary"
-        minSdkVersion 16
+        minSdkVersion project.ext.minimumSdkVersion
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode generateVersionCode() // 150010203
+        versionName generateVersionName() // 1.2.3-SNAPSHOT
     }
     buildTypes {
-        debug {
-            signingConfig signingConfigs.production
-        }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.production
         }
     }
 }
@@ -37,4 +31,22 @@ dependencies {
     compile project(':materiallib')
     //for testing jitpack.io
 //    compile 'com.github.DeveloperPaul123:MaterialLibrary:1.0.2'
+}
+
+private Integer generateVersionCode() {
+    return ext.minimumSdkVersion * 10000000 + ext.versionMajor * 10000 + ext.versionMinor * 100 + ext.versionPatch
+}
+
+private String generateVersionName() {
+    String versionName = "${ext.versionMajor}.${ext.versionMinor}.${ext.versionPatch}"
+    if (ext.versionClassifier == null) {
+        if (ext.isSnapshot) {
+            ext.versionClassifier = "SNAPSHOT"
+        }
+    }
+
+    if (ext.versionClassifier != null) {
+        versionName += "-" + ext.versionClassifier
+    }
+    return versionName
 }
