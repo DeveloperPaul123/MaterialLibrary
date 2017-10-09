@@ -2,6 +2,7 @@ package com.devpaul.materiallibrary.abstracts.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,19 +12,18 @@ import android.widget.FrameLayout;
 
 import com.devpaul.materialfabmenu.R;
 import com.devpaul.materiallibrary.abstracts.AbstractRecyclerScrollListener;
-import com.devpaul.materiallibrary.behaviors.MaterialFabDefaultBehavior;
-import com.devpaul.materiallibrary.views.MaterialFloatingActionButton;
+import com.devpaul.materiallibrary.behaviors.FloatingActionButtonBehavior;
 
 /**
  * Created by Paul on 10/11/2015.
  */
 public abstract class BaseRecyclerFabActivity extends BaseToolbarRecyclerActivity {
 
-    private MaterialFloatingActionButton materialFloatingActionButton;
+    private FloatingActionButton materialFloatingActionButton;
     private static OvershootInterpolator interpolator = new OvershootInterpolator();
     private boolean isShowing;
     private CoordinatorLayout coordinatorLayout;
-
+    private static final int fab_margin = 16;
     /**
      * Scroll listener for the list view.
      */
@@ -52,16 +52,18 @@ public abstract class BaseRecyclerFabActivity extends BaseToolbarRecyclerActivit
         coordinatorLayout.setLayoutParams(params);
 
         CoordinatorLayout.LayoutParams coorLayoutParams = new CoordinatorLayout
-                .LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.MATCH_PARENT);
-        coorLayoutParams.setBehavior(new MaterialFabDefaultBehavior());
+                .LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        coorLayoutParams.setBehavior(new FloatingActionButtonBehavior());
         coorLayoutParams.gravity = Gravity.BOTTOM|Gravity.RIGHT;
-        materialFloatingActionButton = new MaterialFloatingActionButton(this);
+        coorLayoutParams.setBehavior(new FloatingActionButtonBehavior());
+        coorLayoutParams.gravity = Gravity.BOTTOM|Gravity.RIGHT;
+        coorLayoutParams.setMargins(fab_margin, fab_margin, fab_margin, fab_margin);
+        materialFloatingActionButton = new FloatingActionButton(this);
         materialFloatingActionButton.setLayoutParams(coorLayoutParams);
         coordinatorLayout.addView(materialFloatingActionButton);
 
-
-        getHomeLayout().addView(coordinatorLayout);
+        getContentLayout().addView(coordinatorLayout);
         ScrollListener scrollListener = new ScrollListener();
         scrollListener.setRecyclerView(getRecyclerView());
         scrollListener.setScrollThreshold(getResources().getDimensionPixelOffset(R.dimen.material_library_scroll_threshold));

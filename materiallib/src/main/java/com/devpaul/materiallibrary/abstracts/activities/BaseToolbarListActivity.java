@@ -11,6 +11,8 @@ import com.devpaul.materialfabmenu.R;
 
 /**
  * Created by Paul on 6/20/2015.
+ *
+ * Abstract activity that contains a toolbar and a list view.
  */
 public abstract class BaseToolbarListActivity extends AppCompatActivity {
 

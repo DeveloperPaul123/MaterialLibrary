@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -24,7 +25,7 @@ public abstract class BaseCollapsingToolbarActivityWithFAB extends AppCompatActi
     private RecyclerView recyclerView;
     private CollapsingToolbarLayout collapsingToolbarLayout;
     private static OvershootInterpolator interpolator = new OvershootInterpolator();
-    private MaterialFloatingActionButton matFab;
+    private FloatingActionButton matFab;
     private boolean isShowing;
     private AppBarLayout appBarLayout;
 
@@ -36,7 +37,7 @@ public abstract class BaseCollapsingToolbarActivityWithFAB extends AppCompatActi
         toolbar = (Toolbar) findViewById(R.id.material_library_base_toolbar);
         recyclerView = (RecyclerView) findViewById(R.id.material_library_recycler_view);
         collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.material_library_collapsing_toolbar);
-        matFab = (MaterialFloatingActionButton) findViewById(R.id.material_library_floating_action_button);
+        matFab = (FloatingActionButton) findViewById(R.id.material_library_floating_action_button);
         appBarLayout = (AppBarLayout) findViewById(R.id.material_library_app_bar_layout);
         setSupportActionBar(toolbar);
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {

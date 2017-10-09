@@ -13,6 +13,8 @@ import com.devpaul.materialfabmenu.R;
 
 /**
  * Created by Paul on 10/11/2015.
+ *
+ * Abstract activity that contains a toolbar and a recycler view.
  */
 public abstract class BaseToolbarRecyclerActivity extends AppCompatActivity {
 
@@ -20,7 +22,7 @@ public abstract class BaseToolbarRecyclerActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
 
-    private FrameLayout homeLayout;
+    private FrameLayout contentLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +30,12 @@ public abstract class BaseToolbarRecyclerActivity extends AppCompatActivity {
         setContentView(R.layout.material_library_base_toolbar_activity);
         toolbar = (Toolbar) findViewById(R.id.material_library_base_toolbar);
         setSupportActionBar(toolbar);
-        homeLayout = (FrameLayout) findViewById(R.id.material_library_base_activity_content);
+        contentLayout = (FrameLayout) findViewById(R.id.material_library_base_activity_content);
         recyclerView = new RecyclerView(this);
         recyclerView.setId(R.id.material_library_recycler_view);
         FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         recyclerView.setLayoutParams(params);
-        homeLayout.addView(recyclerView);
+        contentLayout.addView(recyclerView);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setLayoutManager(getLayoutManager());
         init();
@@ -50,14 +52,26 @@ public abstract class BaseToolbarRecyclerActivity extends AppCompatActivity {
      */
     public abstract @NonNull RecyclerView.LayoutManager getLayoutManager();
 
-    public FrameLayout getHomeLayout() {
-        return this.homeLayout;
+    /**
+     * Returns the content layout that holds the recyler view.
+     * @return {@link FrameLayout} the content layout.
+     */
+    public FrameLayout getContentLayout() {
+        return this.contentLayout;
     }
 
+    /**
+     * Returns the content {@link Toolbar}.
+     * @return the tool bar.
+     */
     public Toolbar getToolbar() {
         return this.toolbar;
     }
 
+    /**
+     * Returns the main content {@link RecyclerView}.
+     * @return the RecyclerView.
+     */
     public RecyclerView getRecyclerView() {
         return this.recyclerView;
     }

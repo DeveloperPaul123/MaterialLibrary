@@ -13,7 +13,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 import com.devpaul.materialfabmenu.R;
-import com.devpaul.materiallibrary.abstracts.BaseCustomView;
+import com.devpaul.materiallibrary.abstracts.views.BaseCustomView;
 import com.devpaul.materiallibrary.utils.ColorUtils;
 import com.devpaul.materiallibrary.utils.SelectorGenerator;
 

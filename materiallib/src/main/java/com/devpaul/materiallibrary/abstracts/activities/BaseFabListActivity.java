@@ -2,6 +2,7 @@ package com.devpaul.materiallibrary.abstracts.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +12,7 @@ import android.widget.FrameLayout;
 
 import com.devpaul.materialfabmenu.R;
 import com.devpaul.materiallibrary.abstracts.AbstractScrollListener;
-import com.devpaul.materiallibrary.behaviors.MaterialFabDefaultBehavior;
-import com.devpaul.materiallibrary.views.MaterialFloatingActionButton;
+import com.devpaul.materiallibrary.behaviors.FloatingActionButtonBehavior;
 
 /**
  * Created by Paul on 6/21/2015.
@@ -22,10 +22,11 @@ import com.devpaul.materiallibrary.views.MaterialFloatingActionButton;
  */
 public abstract class BaseFabListActivity extends BaseToolbarListActivity {
 
-    private MaterialFloatingActionButton materialFloatingActionButton;
+    private FloatingActionButton materialFloatingActionButton;
     private static OvershootInterpolator interpolator = new OvershootInterpolator();
     private boolean isShowing;
     private CoordinatorLayout coordinatorLayout;
+    private static final int fab_margin = 16;
 
     /**
      * Scroll listener for the list view.
@@ -56,14 +57,14 @@ public abstract class BaseFabListActivity extends BaseToolbarListActivity {
         coordinatorLayout.setLayoutParams(params);
 
         CoordinatorLayout.LayoutParams coorLayoutParams = new CoordinatorLayout
-                .LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.MATCH_PARENT);
-        coorLayoutParams.setBehavior(new MaterialFabDefaultBehavior());
-        coorLayoutParams.gravity = Gravity.BOTTOM|Gravity.RIGHT;
-        materialFloatingActionButton = new MaterialFloatingActionButton(this);
+                .LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+//        coorLayoutParams.setBehavior(new FloatingActionButtonBehavior());
+        coorLayoutParams.gravity = Gravity.BOTTOM|Gravity.END;
+        coorLayoutParams.setMargins(fab_margin, fab_margin, fab_margin, fab_margin);
+        materialFloatingActionButton = new FloatingActionButton(this);
         materialFloatingActionButton.setLayoutParams(coorLayoutParams);
         coordinatorLayout.addView(materialFloatingActionButton);
-
 
         getHomeLayout().addView(coordinatorLayout);
         ScrollListener scrollListener = new ScrollListener();
@@ -98,7 +99,7 @@ public abstract class BaseFabListActivity extends BaseToolbarListActivity {
     public void toggleButton(final boolean visible) {
         if (isShowing != visible) {
             isShowing = visible;
-            int height = materialFloatingActionButton.getHeight();
+            int height = materialFloatingActionButton.getHeight() + fab_margin;
             if (height == 0) {
                 ViewTreeObserver vto = materialFloatingActionButton.getViewTreeObserver();
                 if (vto.isAlive()) {
