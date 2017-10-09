@@ -4,14 +4,14 @@ group = 'com.github.developerpaul123'
 
 ext.versionMajor = 1
 ext.versionMinor = 0
-ext.versionPatch = 6
+ext.versionPatch = 5
 ext.versionClassifier = null
 ext.isSnapshot = true
 ext.minimumSdkVersion = 16
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         minSdkVersion project.ext.minimumSdkVersion
