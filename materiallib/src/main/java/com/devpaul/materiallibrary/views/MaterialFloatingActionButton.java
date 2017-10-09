@@ -27,6 +27,7 @@ import android.view.View;
 import android.view.animation.OvershootInterpolator;
 
 import com.devpaul.materialfabmenu.R;
+import com.devpaul.materiallibrary.behaviors.FloatingActionButtonBehavior;
 import com.devpaul.materiallibrary.utils.ColorUtils;
 import com.devpaul.materiallibrary.utils.ShadowRippleGenerator;
 import com.devpaul.materiallibrary.utils.ShadowSelectorGenerator;
@@ -38,7 +39,10 @@ import java.lang.annotation.RetentionPolicy;
  * Created by Paul T. on 2/28/2015.
  *
  * This class is a floating action button view based on the design guidelines from Google.
+ * @deprecated Use the implementation of the floating action button in the Android Design Library
+ * from Google.
  */
+@Deprecated
 public class MaterialFloatingActionButton extends View {
     public static final int SIZE_NORMAL = 0;
     public static final int SIZE_MINI = 1;
@@ -70,7 +74,7 @@ public class MaterialFloatingActionButton extends View {
     @DrawableRes
     private int mIcon;
 
-    @CoordinatorLayout.DefaultBehavior(com.devpaul.materiallibrary.behaviors.MaterialFabDefaultBehavior.class)
+    @CoordinatorLayout.DefaultBehavior(FloatingActionButtonBehavior.class)
 
     /**
      * Default constructor.

@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.devpaul.materialfabmenu.R;
-import com.devpaul.materiallibrary.abstracts.BaseViewGroup;
+import com.devpaul.materiallibrary.abstracts.views.BaseViewGroup;
 import com.devpaul.materiallibrary.utils.ColorUtils;
 import com.devpaul.materiallibrary.utils.ShadowRippleGenerator;
 
@@ -20,7 +20,10 @@ import com.devpaul.materiallibrary.utils.ShadowRippleGenerator;
  * Created by Paul on 6/30/2015.
  *
  * This is a material flat button. Can be raised or flat.
+ *
+ * @deprecated Use the {@link android.widget.Button} class in Google's support library.
  */
+@Deprecated
 public class MaterialFlatButton extends BaseViewGroup {
 
     /**

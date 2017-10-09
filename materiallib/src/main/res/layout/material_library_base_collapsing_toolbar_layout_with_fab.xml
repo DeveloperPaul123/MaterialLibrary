@@ -34,12 +34,11 @@
         android:layout_width="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
-    <com.devpaul.materiallibrary.views.MaterialFloatingActionButton
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/material_library_floating_action_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:clickable="true"
         app:mat_fab_size="mini"
         app:layout_anchor="@id/material_library_collapsing_toolbar"
         app:layout_anchorGravity="bottom|right|end"/>
