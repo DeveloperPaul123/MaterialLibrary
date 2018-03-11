@@ -9,7 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import com.devpaul.materialfabmenu.R;
+import com.devpaul.materiallibrary.R;
 
 /**
  * Created by Paul on 10/11/2015.

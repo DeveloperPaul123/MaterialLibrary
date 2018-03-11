@@ -13,7 +13,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.OvershootInterpolator;
 
-import com.devpaul.materialfabmenu.R;
+import com.devpaul.materiallibrary.R;
 
 /**
  * Created by Pauly D on 3/13/2015.

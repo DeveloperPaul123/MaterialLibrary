@@ -17,7 +17,7 @@ import android.view.animation.Animation;
 import android.view.animation.OvershootInterpolator;
 import android.view.animation.Transformation;
 
-import com.devpaul.materialfabmenu.R;
+import com.devpaul.materiallibrary.R;
 import com.devpaul.materiallibrary.utils.ColorGenerator;
 
 import java.util.Random;

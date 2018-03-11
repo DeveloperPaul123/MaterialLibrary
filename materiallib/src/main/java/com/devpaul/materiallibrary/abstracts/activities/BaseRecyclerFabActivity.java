@@ -10,7 +10,7 @@ import android.view.ViewTreeObserver;
 import android.view.animation.OvershootInterpolator;
 import android.widget.FrameLayout;
 
-import com.devpaul.materialfabmenu.R;
+import com.devpaul.materiallibrary.R;
 import com.devpaul.materiallibrary.abstracts.AbstractRecyclerScrollListener;
 import com.devpaul.materiallibrary.behaviors.FloatingActionButtonBehavior;
 

@@ -23,7 +23,7 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.widget.Scroller;
 
-import com.devpaul.materialfabmenu.R;
+import com.devpaul.materiallibrary.R;
 import com.devpaul.materiallibrary.utils.ColorUtils;
 import com.devpaul.materiallibrary.views.MaterialFloatingActionButton;
 

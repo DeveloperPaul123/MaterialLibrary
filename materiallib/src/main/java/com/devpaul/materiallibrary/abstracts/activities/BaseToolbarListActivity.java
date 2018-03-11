@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 
-import com.devpaul.materialfabmenu.R;
+import com.devpaul.materiallibrary.R;
 
 /**
  * Created by Paul on 6/20/2015.

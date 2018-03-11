@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
-import com.devpaul.materialfabmenu.R;
+import com.devpaul.materiallibrary.R;
 
 /**
  * Created by Paul on 7/9/2015.

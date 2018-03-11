@@ -26,7 +26,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.OvershootInterpolator;
 
-import com.devpaul.materialfabmenu.R;
+import com.devpaul.materiallibrary.R;
 import com.devpaul.materiallibrary.behaviors.FloatingActionButtonBehavior;
 import com.devpaul.materiallibrary.utils.ColorUtils;
 import com.devpaul.materiallibrary.utils.ShadowRippleGenerator;

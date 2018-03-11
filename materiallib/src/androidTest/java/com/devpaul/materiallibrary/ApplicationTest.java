@@ -1,4 +1,4 @@
-package com.devpaul.materialfabmenu;
+package com.devpaul.materiallibrary;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

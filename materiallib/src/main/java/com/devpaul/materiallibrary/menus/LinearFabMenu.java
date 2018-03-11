@@ -18,7 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.OvershootInterpolator;
 
-import com.devpaul.materialfabmenu.R;
+import com.devpaul.materiallibrary.R;
 import com.devpaul.materiallibrary.utils.ColorUtils;
 import com.devpaul.materiallibrary.utils.RippleGenerator;
 import com.devpaul.materiallibrary.utils.ScreenUtil;

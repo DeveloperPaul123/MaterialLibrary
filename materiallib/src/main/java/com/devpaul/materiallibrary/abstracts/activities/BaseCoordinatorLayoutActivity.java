@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 
-import com.devpaul.materialfabmenu.R;
+import com.devpaul.materiallibrary.R;
 
 /**
  * Created by Paul on 7/9/2015.

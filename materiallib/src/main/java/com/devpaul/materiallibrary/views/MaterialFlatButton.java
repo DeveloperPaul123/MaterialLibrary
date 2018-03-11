@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.devpaul.materialfabmenu.R;
+import com.devpaul.materiallibrary.R;
 import com.devpaul.materiallibrary.abstracts.views.BaseViewGroup;
 import com.devpaul.materiallibrary.utils.ColorUtils;
 import com.devpaul.materiallibrary.utils.ShadowRippleGenerator;

@@ -13,8 +13,7 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.animation.OvershootInterpolator;
 
-import com.devpaul.materialfabmenu.R;
-import com.devpaul.materiallibrary.views.MaterialFloatingActionButton;
+import com.devpaul.materiallibrary.R;
 
 /**
  * Created by Paul on 10/4/2015.

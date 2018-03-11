@@ -14,7 +14,7 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.ImageButton;
 
-import com.devpaul.materialfabmenu.R;
+import com.devpaul.materiallibrary.R;
 import com.devpaul.materiallibrary.utils.ColorUtils;
 
 /**
