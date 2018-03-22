@@ -20,7 +20,7 @@ public class MenuActivity extends BaseToolbarActivity {
     }
 
     @Override
-    public void init() {
+    public void initialize() {
         getToolbar().setTitleTextColor(getResources().getColor(android.R.color.white));
 
         LinearFabMenu linearFabMenu = (LinearFabMenu) findViewInContentById(R.id.linearFabMenu);

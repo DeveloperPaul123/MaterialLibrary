@@ -15,7 +15,7 @@ public class ButtonActivity extends BaseToolbarActivity {
     }
 
     @Override
-    public void init() {
+    public void initialize() {
 
     }
 }

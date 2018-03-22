@@ -37,7 +37,12 @@ public abstract class BaseToolbarActivity extends AppCompatActivity {
         FrameLayout layout = findViewById(R.id.material_library_base_activity_content);
         content = getLayoutInflater().inflate(getLayoutContentId(), layout, false);
         layout.addView(content);
-        init();
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        initialize();
     }
 
     /**
@@ -49,7 +54,7 @@ public abstract class BaseToolbarActivity extends AppCompatActivity {
     /**
      * Perform you initialization here. This is called after on create.
      */
-    public abstract void init();
+    public abstract void initialize();
 
     /**
      * Use this instead of findViewById. This method will search the layout resource file that you

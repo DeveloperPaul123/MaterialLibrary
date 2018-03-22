@@ -29,7 +29,7 @@ public class MainActivity extends BaseToolbarListActivity {
     };
 
     @Override
-    public void init() {
+    public void initialize() {
         List<ListItem> items = new ArrayList<>();
         for(int i = 0; i < titles.length; i++) {
             ListItem item = new ListItem();

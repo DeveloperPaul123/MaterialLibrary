@@ -75,10 +75,10 @@ public class RippleGenerator {
      *     private RippleGenerator ripGen;
      *     public MyView(Context) {
      *         super(context);
-     *         init();
+     *         initialize();
      *     }
      *
-     *     public void init() {
+     *     public void initialize() {
      *          //note that these are dummy functions.
      *          float cx = getCenterX();
      *          float cy = getCenterY();

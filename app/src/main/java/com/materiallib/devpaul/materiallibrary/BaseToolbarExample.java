@@ -13,7 +13,7 @@ public class BaseToolbarExample extends BaseToolbarActivity {
     }
 
     @Override
-    public void init() {
+    public void initialize() {
         //do your initialization here.
     }
 }

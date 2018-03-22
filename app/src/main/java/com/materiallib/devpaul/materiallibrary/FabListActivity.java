@@ -19,7 +19,7 @@ public class FabListActivity extends BaseFabListActivity {
 
 
     @Override
-    public void init() {
+    public void initialize() {
         List<ListItem> items = new ArrayList<>();
         for(int i = 0; i < 50; i++) {
             items.add(new ListItem("Item " + i));

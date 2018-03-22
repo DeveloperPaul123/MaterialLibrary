@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class BaseListActivity extends BaseToolbarListActivity {
     @Override
-    public void init() {
+    public void initialize() {
         List<ListItem> items = new ArrayList<>();
         for(int i = 0; i < 50; i++) {
             items.add(new ListItem("Item " + i));

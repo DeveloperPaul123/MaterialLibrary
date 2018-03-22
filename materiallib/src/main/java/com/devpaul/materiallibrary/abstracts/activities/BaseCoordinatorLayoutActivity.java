@@ -21,7 +21,7 @@ public abstract class BaseCoordinatorLayoutActivity extends AppCompatActivity {
     }
 
     /**
-     * Perform initialization here. Note that this activity does not call init(). Needs to be called
+     * Perform initialization here. Note that this activity does not call initialize(). Needs to be called
      * at the end of onCreate in classes that inherit from this one.
      */
     public abstract void init();
