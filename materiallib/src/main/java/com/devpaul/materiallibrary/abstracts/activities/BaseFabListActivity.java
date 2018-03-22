@@ -58,14 +58,17 @@ public abstract class BaseFabListActivity extends BaseToolbarListActivity {
         CoordinatorLayout.LayoutParams coorLayoutParams = new CoordinatorLayout
                 .LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
-//        coorLayoutParams.setBehavior(new FloatingActionButtonBehavior());
+
         coorLayoutParams.gravity = Gravity.BOTTOM|Gravity.END;
         coorLayoutParams.setMargins(fab_margin, fab_margin, fab_margin, fab_margin);
         materialFloatingActionButton = new FloatingActionButton(this);
         materialFloatingActionButton.setLayoutParams(coorLayoutParams);
         coordinatorLayout.addView(materialFloatingActionButton);
+        // add the coordinator layout
+        FrameLayout homeLayout = findViewById(R.id.material_library_base_activity_content);
+        homeLayout.addView(coordinatorLayout);
 
-        getHomeLayout().addView(coordinatorLayout);
+        // setup the scroll listener
         ScrollListener scrollListener = new ScrollListener();
         scrollListener.setListView(getListView());
         scrollListener.setScrollThreshold(getResources().getDimensionPixelOffset(R.dimen.material_library_scroll_threshold));
